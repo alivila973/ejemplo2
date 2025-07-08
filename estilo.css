@@ -1,0 +1,254 @@
+/* --- Estilos generales --- */
+body {
+    font-family: 'Segoe UI', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to right, #f0f0f0, #e0e0ff);
+    color: #333;
+}
+
+/* --- Header con título animado --- */
+header {
+    background: linear-gradient(90deg, #1a2a6c, #b21f1f, #fdbb2d);
+    color: white;
+    text-align: center;
+    padding: 30px 10px;
+    position: relative;
+}
+
+header h1 {
+    font-size: 2.8em;
+    animation: glow 2s ease-in-out infinite alternate, float 3s ease-in-out infinite;
+}
+
+@keyframes glow {
+    from { text-shadow: 0 0 10px #fff, 0 0 20px #ff6, 0 0 30px #f90; }
+    to   { text-shadow: 0 0 20px #fff, 0 0 30px #ff0, 0 0 40px #f90; }
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-8px); }
+}
+
+/* --- Navegación --- */
+nav {
+    background-color: #333;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    margin: 0;
+    padding: 10px 0;
+}
+
+nav ul li {
+    margin: 0 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #00ffcc;
+}
+
+/* --- Secciones --- */
+main {
+    padding: 30px;
+}
+
+section {
+    background-color: white;
+    margin-bottom: 40px;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+}
+
+section:hover {
+    transform: scale(1.02);
+}
+
+section h2 {
+    color: #2c3e50;
+    text-align: center;
+    animation: glow 1.5s ease-in-out infinite alternate;
+}
+
+/* --- Tablas --- */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+    border: 2px solid #ccc;
+}
+
+table th, table td {
+    padding: 10px;
+    border: 1px solid #999;
+    background: #f7f7f7;
+}
+
+/* --- Imágenes y Videos --- */
+img, video {
+    width: 100%;
+    max-width: 700px;
+    margin: 15px auto;
+    display: block;
+    border-radius: 12px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+    transition: transform 0.3s;
+}
+
+img:hover, video:hover {
+    transform: scale(1.05);
+}
+
+/* --- Footer --- */
+footer {
+    background-color: #222;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    font-size: 1em;
+    position: relative;
+    z-index: 1;
+}
+/* --- Botón modo oscuro --- */
+#modo-btn {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+    font-size: 20px;
+    padding: 10px;
+    background: #1abc9c;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 0 8px rgba(0,0,0,0.2);
+}
+
+/* --- Estilo para modo oscuro --- */
+body.dark-mode {
+    background-color: #121212;
+    color: #f0f0f0;
+}
+
+body.dark-mode header {
+    background: #1e1e1e;
+}
+
+body.dark-mode nav {
+    background: #111;
+}
+
+body.dark-mode nav a {
+    color: #ddd;
+}
+
+body.dark-mode section {
+    background: #1e1e1e;
+}
+
+body.dark-mode footer {
+    background: #111;
+}
+
+
+/* --- Barra de progreso de lectura --- */
+#barra-progreso {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 5px;
+    background: #1abc9c;
+    width: 0%;
+    z-index: 999;
+}
+
+/* --- Fondo animado --- */
+body::before {
+    content: "";
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: url('https://www.transparenttextures.com/patterns/stardust.png');
+    opacity: 0.2;
+    z-index: -1;
+}
+
+.oculto {
+  display: none;
+}
+
+#mensaje-registro {
+  margin-top: 10px;
+  color: green;
+  font-weight: bold;
+}
+
+#registro {
+  background-color: #ffffff;
+  padding: 25px;
+  margin: 40px auto;
+  max-width: 500px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+#registro h2 {
+  text-align: center;
+  color: #1d3557;
+  margin-bottom: 20px;
+}
+
+#form-registro {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+#form-registro label {
+  font-weight: bold;
+  color: #333;
+}
+
+#form-registro input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 16px;
+}
+
+#form-registro button {
+  background-color: #1d3557;
+  color: white;
+  padding: 12px;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#form-registro button:hover {
+  background-color: #457b9d;
+}
+
+#mensaje-registro {
+  margin-top: 15px;
+  text-align: center;
+  color: green;
+  font-weight: bold;
+  font-size: 16px;
+}
